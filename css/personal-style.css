@@ -1,0 +1,30 @@
+body {
+  	font-family:"微软雅黑";
+  	background-color:#eee;
+}
+.navbar{
+	margin-bottom:0;
+}
+.navbar-brand img{
+	display:inline-block;
+	width:30px;
+	margin-top:-5px;
+	margin-right:5px;
+}
+.carousel{
+	max-height:400px;
+	overflow:hidden;
+	background-color:#fff;
+}
+.carousel .item{
+	background-color:#fff;
+}
+.carousel .carousel-caption{
+	font-family:"黑体";
+	color:#eee;
+}
+.carousel-indicators{
+	bottom:-5px;
+}
+.jumbotron{
+}
