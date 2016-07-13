@@ -205,3 +205,6 @@ body {
 	margin-top:-3px;
 	margin-right:5px;
 }
+#teamList > img{
+	width:100%;
+}
