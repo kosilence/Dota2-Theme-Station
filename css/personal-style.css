@@ -2,6 +2,11 @@ body {
   	font-family:"微软雅黑";
   	background-color:#eee;
   	min-height:2000px;
+  	margin-top:50px;
+  	-webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
 }
 .navbar{
 	margin-bottom:0;
@@ -12,47 +17,69 @@ body {
 	margin-top:-5px;
 	margin-right:5px;
 }
-.carousel-indicators{
+.navbar-inner{
+	color:#333;
+}
+#home-title-carousel{
+	background-color:#333;
+}
+#home-title-carousel .carousel-inner .item{
+    opacity:0;
+    -webkit-transition-property:opacity ;
+    -moz-transition-property:opacity ;
+    -ms-transition-property:opacity ;
+    -o-transition-property:opacity ;
+    transition-property:opacity ;
+}
+#home-title-carousel .carousel-inner .active{
+    opacity: 1;
+}
+#home-title-carousel .carousel-inner .active.left,#home-title-carousel .carousel-inner .active.right{
+    left: 0;
+    opacity: 0;
+}
+#home-title-carousel .carousel-inner .next.left,.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+#home-title-carousel .carousel-indicators{
 	bottom:-5px;
 }
-.p-divide > span{
-	display:inline-block;
-	width:100%;
-	height:60px;
-	background-color:rgba(207, 207, 207, 0.3);
-	text-decoration: none;
-	text-align:center;
-	padding-top:12px;
-	font-size:20px;
-	transition:padding-top .3s;
-}
-a.p-divide :hover{
+.p-divide{
+	display:block;
+	width:90%;
+	height:50px;
+	margin:5px auto;
 	background-color:rgba(207, 207, 207, 0.5);
-	padding-top:20px;
-
+	text-align:center;
+	text-decoration: none;
+	font-size:20px;
+	padding-top:11px;
+	border:1px solid #eee;
 }
 .p-jumbotron{
 	width:90%;
+	overflow:hidden;
 	margin:0 auto;
 	font-family:"Microsoft Yahei";
 	background-color:#333;
+	transition:height .7s;
 }
 .p-jumbotron > a{
 	color:#333;
 	display:inline-block;
 	width:100%;
-	height:100%;
 	background-color:#eee;
 	border-bottom:2px solid #333;
 	text-decoration: none;
 	position:relative;
-	padding:10px 10px 10px 0;
+	padding:10px 30px 20px 0;
 	left:0;
-	transition:left .3s, padding-left .3s;
+	transition:left .3s, padding-left .3s, padding-right .3s;
 }
 .p-jumbotron > a:hover{
 	left:10px;
 	padding-left:10px;
+	padding-right:20px;
 }
 .p-jumbotron time{
 	position:relative;
@@ -61,4 +88,120 @@ a.p-divide :hover{
 	background-color:#113346;
 	color:#eee;
 	font-weight:bold;
+}
+#home-ti-carousel{
+	margin-top:10%;
+}
+.p-carousel-leftpic{
+	position:absolute;
+	top:0;
+	left:20px;
+	width:30%;
+	height:100%;
+	z-index:100;
+}
+.p-carousel-rightpic{
+	position:absolute;
+	top:0;
+	right:20px;
+	width:28%;
+	height:100%;
+	z-index:100;
+}
+.p-carousel-centerpic{
+	position:absolute;
+	bottom:0;
+	left:-10%;
+	width:120%;
+}
+.p-carousel-leftpic > img, .p-carousel-rightpic > img, .p-carousel-centerpic > img{
+	width:100%;
+}
+.p-carousel-title{
+	position:absolute;
+	width:10%;
+	height:20%;
+	bottom:110%;
+	left:45%;
+	background-color:#eee;
+	border:2px solid #050000;
+	border-radius:20px 20px 4px 4px;
+	z-index:1000;
+}
+.p-carousel-title > a{
+	display:inline-block;
+	width:calc(100% - 6px);
+	height:calc(100% - 6px);
+	box-sizing:border-box;
+	border:2px solid #340002;
+	border-radius:20px 20px 4px 4px;
+	margin:3px;
+	background-color:#340002;
+	text-decoration: none;
+	color:#eee;
+	text-align:center;
+	font-size:12px;
+	padding-top:6%;
+	font-family:"黑体";
+}
+@media (min-width: 768px){
+	.p-carousel-title > a{
+		font-size:20px;
+		padding-top:5%;
+	}
+}
+@media (min-width: 992px){
+	.p-carousel-title > a{
+		font-size:28px;
+		padding-top:6%;
+	}
+}
+#home-ti-carousel .carousel-inner{
+	width:40%;
+	margin:0 auto;
+	box-sizing:border-box;
+	border-top:20px solid #050000;
+	border-bottom:20px solid #050000;
+	border-radius:10px;
+}
+#home-ti-carousel .carousel-inner .item{
+	width:100%;
+}
+#home-ti-carousel .carousel-control{
+	width:5%;
+	height:20%;
+	background-color:#050000;
+	border:1px solid #050000;
+	transition:width .3s;
+	z-index:100;
+}
+#home-ti-carousel .carousel-control:hover{
+	width:8%;
+}
+#home-ti-carousel .right{
+	border-radius:50px 0 0 50px;
+}
+#home-ti-carousel .left{
+
+	border-radius:0 50px 50px 0;
+}
+.modal-body{
+	background-color:#eee;
+}
+.modal-body > h5{
+	font-weight:bold;
+	text-align:center;
+}
+.modal-body > p{
+	margin:20px auto;
+	font-size:15px;
+	line-height:2em;
+	text-indent:1.5em;
+}
+.modal-body > img{
+	width:100%;
+}
+.table td > img{
+	margin-top:-3px;
+	margin-right:5px;
 }

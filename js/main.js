@@ -35,3 +35,47 @@ var func = (function() {
                 }
         };
 })();
+
+var newsTags = func.$a(".p-jumbotron > a");
+var newsNum = newsTags.length;
+var newDisCount = 2;
+var newsTagsHeight = [];
+var pHeight = 0;
+var newsAddBtn = func.$(".p-divide");
+
+var init = function() {
+        for(var i=0;i<newsNum;i++) {
+                newsTagsHeight[i] = newsTags[i].offsetHeight;
+        }
+        pHeight = newsTagsHeight[0] + newsTagsHeight[1];
+        newsTags[0].parentNode.style.height = pHeight + "px";
+};
+function newsBtnClick(ele) {
+        if(newsNum - newDisCount >= 2){
+                pHeight = pHeight + newsTagsHeight[newDisCount] + newsTagsHeight[newDisCount + 1];
+                newsTags[0].parentNode.style.height = pHeight + "px";
+                newDisCount = newDisCount + 2;
+        }else if(newsNum - newDisCount == 1){
+                pHeight = pHeight + newsTagsHeight[newDisCount];
+                newsTags[0].parentNode.style.height = pHeight + "px";
+                newDisCount = newDisCount + 1;
+                ele.firstChild.className = "glyphicon glyphicon-minus";
+        }else{
+                pHeight = newsTagsHeight[0] + newsTagsHeight[1];
+                newsTags[0].parentNode.style.height = pHeight + "px";
+                ele.firstChild.className = "glyphicon glyphicon-plus";
+                newDisCount = 2;
+        }
+}
+function setTiTitle(){
+        var currentItem = func.$("#home-ti-carousel .active");
+        var tiItems = func.$a("#home-ti-carousel .item");
+        var tiItemsTitle = func.$("#home-ti-carousel .p-carousel-title");
+        for(var i=0;i<tiItems.length;i++) {
+                if(currentItem == tiItems[i]){
+                        tiItemsTitle.innerHTML = "<a href='#' data-toggle='modal' data-target='#ti-list" + i +"'>TI" + (i+1) + " <span class='glyphicon glyphicon-link'></span></a>";
+                        break;
+                }
+        }
+}
+init();

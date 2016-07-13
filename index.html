@@ -13,7 +13,7 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-static-top">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -31,6 +31,7 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
+					<li><a href="#">赛事消息</a></li>
 					<li><a href="#">历届TI</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">战队 <span class="caret"></span></a>
@@ -52,83 +53,697 @@
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</nav>
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+	<!-- 首页标题轮播图 -->
+	<div id="home-title-carousel" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
-			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-			<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+			<li data-target="#home-title-carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#home-title-carousel" data-slide-to="1"></li>
+			<li data-target="#home-title-carousel" data-slide-to="2"></li>
+			<li data-target="#home-title-carousel" data-slide-to="3"></li>
 		</ol>
 
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner" role="listbox">
 			<div class="item active">
-				<img src="img/bg_02.jpg" alt="...">
-				<div class="carousel-caption">
-				</div>
+				<img src="img/bg/bg_02.jpg" alt="...">
 			</div>
 			<div class="item">
-				<img src="img/bg_03.jpg" alt="...">
-				<div class="carousel-caption">
-				</div>
+				<img src="img/bg/bg_03.jpg" alt="...">
 			</div>
 			<div class="item">
-				<img src="img/bg_06.jpg" alt="...">
-				<div class="carousel-caption">
-				</div>
+				<img src="img/bg/bg_06.jpg" alt="...">
 			</div>
 			<div class="item">
-				<img src="img/bg_07.png" alt="...">
-				<div class="carousel-caption">
-				</div>
+				<img src="img/bg/bg_07.png" alt="...">
 			</div>
 		</div>
 
 		<!-- Controls -->
-		<a class="left carousel-control personal-carousel" href="#carousel-example-generic" role="button" data-slide="prev">
+		<a class="left carousel-control" href="#home-title-carousel" role="button" data-slide="prev">
 			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>
 		</a>
-		<a class="right carousel-control personal-carousel" href="#carousel-example-generic" role="button" data-slide="next">
+		<a class="right carousel-control" href="#home-title-carousel" role="button" data-slide="next">
 			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 			<span class="sr-only">Next</span>
 		</a>
 	</div>
-	<a href="#" class="p-divide"><span class="glyphicon glyphicon-menu-down"></span></a>
+
+	<!-- 赛事消息列表 -->
 	<div class="container">
 		<div class="p-jumbotron">
-			<a href="#">
+			<a href="#" data-toggle="modal" data-target="#news-page4">
 				<article class="p-article">
-					<time>08/07/2016</time>
-					<h3 class="">函数式编程有何贵干</h3>
-					<p>目前React、Webpack等技术如火如荼</p>
-					<p>开启一段新的前端开发之路呢？</p>
+					<time><span class="glyphicon glyphicon-time"></span> 29/06/2016</time>
+					<h3>VG.R获淘汰赛冠军直入国际邀请赛正赛 Ehome进入外卡赛</h3>
+					<p>北京时间2016年6月29日，中国区预选赛的最后一天进行了败者组的决赛和总决赛。</p>
+					<p>VG战队1:2不敌VG.R率先被淘汰</p>
 				</article>
 			</a>
-			<a href="#">
+			<a href="#" data-toggle="modal" data-target="#news-page3">
 				<article class="p-article">
-					<time>08/07/2016</time>
-					<h3 class="">函数式编程有何贵干</h3>
-					<p>目前React、Webpack等技术如火如荼</p>
-					<p>开启一段新的前端开发之路呢？</p>
+					<time><span class="glyphicon glyphicon-time"></span> 28/06/2016</time>
+					<h3>Ehome获胜者组冠军 IG鏖战90分钟不敌VG离开中国区预选赛</h3>
+					<p>北京时间2016年6月28日，中国区预选赛的赛场已经结束了为期两天积分循环赛，赛程来到双败淘汰赛。</p>
+					<p>今日上午十点开始了第一轮的淘汰赛，VG.R和Ehome均以2：0 的战绩分别击败IG和VG。</p>
+					<p>之后Ehome又以2：1的战绩战胜了VG.R，率先获得了前往西雅图的机会。</p>
 				</article>
 			</a>
-			<a href="#">
+			<a href="#" data-toggle="modal" data-target="#news-page2">
 				<article class="p-article">
-					<time>08/07/2016</time>
-					<h3 class="">函数式编程有何贵干</h3>
-					<p>目前React、Webpack等技术如火如荼</p>
-					<p>开启一段新的前端开发之路呢？</p>
+					<time><span class="glyphicon glyphicon-time"></span> 27/06/2016</time>
+					<h3>Wings战队获头名受邀西雅图 明日开启淘汰赛征程</h3>
+					<p>北京时间2016年6月27日，中国区预选赛积分循环赛已全部结束，第一名与第五名均有两支同分的队伍，在20:30时进行了两场加赛决出最终积分排名。</p>
+					<p>其中头名之争中，WINGS战队连续三波团灭Ehome，最终锁定胜局，同时也拿到了本届国际邀请赛直接受邀名额。</p>
+				</article>
+			</a>
+			<a href="#" data-toggle="modal" data-target="#news-page1">
+				<article class="p-article">
+					<time><span class="glyphicon glyphicon-time"></span> 27/06/2016</time>
+					<h3>中国区预选赛积分胶着 详解循环赛加赛规则</h3>
+					<p>中国区预选赛积分循环赛即将进入尾声，依据公平竞赛的原则，Valve详解了最新的预选赛规则。</p>
+					<p>如果在预选赛小组赛结束后，出线第一名的队伍同分，或是第五名的队伍同分，需要进行加赛，不看胜负关系。</p>
+				</article>
+			</a>
+			<a href="#" data-toggle="modal" data-target="#news-page0">
+				<article class="p-article">
+					<time><span class="glyphicon glyphicon-time"></span> 24/06/2016</time>
+					<h3>2016年中国区预选赛赛制及小组赛赛程公布</h3>
+					<p>距离2016年国际邀请赛中国区预选赛正式开赛仅剩两天了。10支战队已全部揭晓。</p>
+					<p>他们分别是：CDEC，IG.Vitality，CDEC.Youth，Wings Gaming，IG，TongFu，EHOME和Vici Gaming.Reborn（八支直接受邀战队）和Vici Gaming，NEWBEE.Y（两支公开赛优胜队伍）。</p>
 				</article>
 			</a>
 		</div>
+		<a href="#" class="p-divide" onclick="newsBtnClick(this);return false;"><span class="glyphicon glyphicon-plus"></span></a>
 	</div>
 
+	<!-- 首页历届TI轮播图 -->
+	<div id="home-ti-carousel" class="carousel slide" data-ride="carousel">
+		<div class="p-carousel-leftpic">
+			<img src="img/ti/ti-leftpic.png">
+		</div>
+		<div class="p-carousel-rightpic">
+			<img src="img/ti/ti-rightpic.png">
+		</div>
+		<div class="p-carousel-centerpic">
+			<img src="img/ti/ti-centerpic.png">
+		</div>
+		<div class="p-carousel-title">
+			<a href="#" data-toggle="modal" data-target="#ti-list0">TI1 <span class="glyphicon glyphicon-link"></span></a>
+		</div>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="img/ti/ti1_0.jpg" alt="ti1">
+			</div>
+			<div class="item">
+				<img src="img/ti/ti2_0.jpg" alt="ti2">
+			</div>
+			<div class="item">
+				<img src="img/ti/ti3_0.jpg" alt="ti3">
+			</div>
+			<div class="item">
+				<img src="img/ti/ti4_0.jpg" alt="ti4">
+			</div>
+			<div class="item">
+				<img src="img/ti/ti5_0.png" alt="ti5">
+			</div>
+		</div>
+		<!-- Controls -->
+		<a class="left carousel-control" href="#home-ti-carousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#home-ti-carousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+
+	<!-- 战队列表 -->
+	<div class="container"></div>
+
+	<!-- 弹出框page页面内容 -->
+	<!-- news-page0 -->
+	<div class="modal fade" id="news-page0" tabindex="-1" role="dialog" aria-labelledby="news-page0Label">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="news-page0Label">2016年中国区预选赛赛制及小组赛赛程公布</h4>
+					</div>
+					<div class="modal-body">
+						<p>距离2016年国际邀请赛中国区预选赛正式开赛仅剩两天了。10支战队已全部揭晓。</p>
+						<p>他们分别是：CDEC，IG.Vitality，CDEC.Youth，Wings Gaming，IG，TongFu，EHOME和Vici Gaming.Reborn（八支直接受邀战队）和Vici Gaming，NEWBEE.Y（两支公开赛优胜队伍）。</p>
+						<p>2016年国际邀请赛中国区预选赛会分为小组赛和淘汰赛进行选拔
+							小组赛：8支直接受邀的战队将与两支公开赛优胜队伍进行BO1积分循环赛，最终积分排名第一直接获得2016国际邀请赛小组赛名额。第2-5名战队将进行两天的淘汰赛。其他队伍均被淘汰。</p>
+						<p>淘汰赛：四支队伍将进行双败淘汰，第二名的战队可随机挑选第四或第五的战队进行比赛，第三名将与剩下的一支进行较量，淘汰赛冠军将获得前往西雅图的第二张门票，淘汰赛亚军将与其他三大区的战队进行外卡赛。</p>
+						<img src="img/news-page/page0_2.jpg">
+						<p>26日-27日的小组积分赛赛程已公布，可点击赛程页面查看详细比赛时间及对阵。</p>
+						<h5>6月26日赛程</h5>
+						<img src="img/news-page/page0_0.jpg">
+						<h5>6月27日赛程</h5>
+						<img src="img/news-page/page0_1.jpg">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- news-page1 -->
+	<div class="modal fade" id="news-page1" tabindex="-1" role="dialog" aria-labelledby="news-page1Label">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="news-page1Label">中国区预选赛积分胶着 详解循环赛加赛规则</h4>
+				</div>
+				<div class="modal-body">
+					<p>中国区预选赛积分循环赛即将进入尾声，依据公平竞赛的原则，Valve详解了最新的预选赛规则。如果在预选赛小组赛结束后，出线第一名的队伍同分，或是第五名的队伍同分，需要进行加赛，不看胜负关系。</p>
+					<p>不涉及到第一名和第五名的同分，根据胜负关系来判定最终名次。</p>
+					<p>加赛规则——两队同分的情况：<br>
+						1.   如果在预选赛小组赛结束后，有两支队伍分数相同，且同时位于小组第一，则两支队伍将进行一场BO1的加赛。<br>
+						2.   如果在预选赛小组赛结束后，有两支队伍分数相同，且同时位于小组第五，则两支队伍将进行一场BO1的加赛。
+					</p>
+					<p>加赛规则——三队同分的情况：<br>
+						1.   如果在预选赛小组赛结束后，有三支队伍分数相同，且同时位于小组第一，则三支队伍将进行BO1的单循环，总计三场比赛。<br>
+						2.   如果在预选赛小组赛结束后，有三支队伍分数相同，且同时位于小组第四，或小组第五，则三支队伍将进行BO1的单循环，通过比较加赛的胜负关系来决定第四名和第五名的队伍，总计三场比赛。<br>
+						3.   如果以上两种情况同时发生，即有三支队伍同列小组第一，同时有三支队伍同列小组第四或小组第五，则决出小组第一的比赛和决出小组第五的比赛比赛同时开始。<br>
+						4.   如果首次加赛无法决定胜者，则进行第二轮加赛，裁判长可以宣布第二轮加赛采用时间评分制<br>
+						5.   时间评分：<br>
+     					1）评分：（最长负场的时间）减去（最短胜场的时间）<br>
+     					2）评分最高的队伍进入下一轮</p>
+					<p> 积分循环赛加赛结束后，6月28至29日期间，第二到第五名的战队将进行双败淘汰赛。淘汰赛冠军进入国际邀请赛主赛事，亚军进入外卡赛。</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- news-page2 -->
+	<div class="modal fade" id="news-page2" tabindex="-1" role="dialog" aria-labelledby="news-page2Label">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="news-page2Label">Wings战队获头名受邀西雅图 明日开启淘汰赛征程</h4>
+				</div>
+				<div class="modal-body">
+					<p>北京时间2016年6月27日，中国区预选赛积分循环赛已全部结束，第一名与第五名均有两支同分的队伍，在20:30时进行了两场加赛决出最终积分排名。其中头名之争中，WINGS战队连续三波团灭Ehome，最终锁定胜局，同时也拿到了本届国际邀请赛直接受邀名额。而第五名的争夺中，VG也是稳住局面，淘汰IG.V战队，与Ehome, VG.R，IG战队进入淘汰赛。感谢所有参赛队伍为玩家带来如此精彩的比拼。</p>
+					<img src="img/news-page/page2_0.jpg">
+					<p>今日发挥比较好的队伍WINGS和EHOME，在积分循环赛中都拿出了7胜2负的战绩，EHOME是祭出了比较擅长的冰女的体系，而BO1的赛制显然也是很适合WINGS战队的发挥，天下武功，唯快不破，让人意想不到的阵容搭配在容错几率比较低的BO1赛制里面很容易让人措手不及。最终战胜EHOME直接晋级西雅图。</p>
+					<img src="img/news-page/page2_1.jpg">
+					<img src="img/news-page/page2_2.png">
+					<p>同样VG战队今天的表现也一扫昨天的阴霾，在首轮输给CDEC.Y之后连下三局，最终拿到了第五名加赛的名额，并在对战IG.V的加赛中取得胜利获得第五名，进入了明天的双败淘汰赛。尤其是在对阵IG的对战中，VG战队1级打盾，让对手措手不及，并在没有什么AOE的情况下使用小黑体系迅速推掉了对方的两路高地，最终获得了比赛的胜利。</p>
+					<img src="img/news-page/page2_3.jpg">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- news-page3 -->
+	<div class="modal fade" id="news-page3" tabindex="-1" role="dialog" aria-labelledby="news-page3Label">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="news-page3Label">Ehome获胜者组冠军 IG鏖战90分钟不敌VG离开中国区预选赛</h4>
+				</div>
+				<div class="modal-body">
+					<p>北京时间2016年6月28日，中国区预选赛的赛场已经结束了为期两天积分循环赛，赛程来到双败淘汰赛，今日上午十点开始了第一轮的淘汰赛，VG.R和Ehome均以2：0 的战绩分别击败IG和VG。之后Ehome又以2：1的战绩战胜了VG.R，率先获得了前往西雅图的机会。</p>
+					<p>而在残酷的败者组淘汰赛中，IG战队以0:2的战绩惜败，与2016年的国际邀请赛擦肩而过。</p>
+					<img src="img/news-page/page3_0.jpg">
+					<p>今日比赛中发挥比较稳定的就是Ehome的old chicken和iceiceice, 精彩的输出型三号位以进为退终压制了对方的进攻，最后决胜局的BO3中VG.R的输出完全不够，伐木机的双飞盘将对方船长击杀，DS又被夜魔追死。在破掉对方三路之后，VG.R只能打出GG。VG和VG.R在今天的比赛中也是多次祭出了蓝猫这个英雄，虽然在这次的版本中有略微加强，但就今天的赛事结果来看，这个英雄在国际级别的赛事中出现，还是略显乏力。</p>
+					<img src="img/news-page/page3_1.jpg">
+					<p>今日比赛最精彩的一部分就是败者组的VG对IG的第二局，幽鬼对战美杜莎将比赛时间推到了90分钟！战局有来有回，团战爆发之后双方竞相买活，将一场十个人的战斗变成二十人的战斗!最终VG在决胜局战胜了IG，晋级29日的败者组决赛。而IG鏖战如此长的战斗后惜败离场。现场的玩家也是陪伴了两支战队一直到比赛结束，感谢广大玩家的热情支持。</p>
+					<img src="img/news-page/page3_2.jpg">
+					<img src="img/news-page/page3_3.jpg">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- news-page4 -->
+	<div class="modal fade" id="news-page4" tabindex="-1" role="dialog" aria-labelledby="news-page4Label">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="news-page4Label">VG.R获淘汰赛冠军直入国际邀请赛正赛 Ehome进入外卡赛</h4>
+				</div>
+				<div class="modal-body">
+					<p>北京时间2016年6月29日，中国区预选赛的最后一天进行了败者组的决赛和总决赛,VG战队1:2不敌VG.R率先被淘汰。在接下来的BO5总决赛中，VG.R以3：2的战绩战胜EHOME获得淘汰赛的冠军，进入了国际邀请赛主赛事，而亚军Ehome进入外卡赛。VG战队惜败最终无缘2016国际邀请赛。</p>
+					<img src="img/news-page/page4_0.jpg">
+					<p>在败者组决赛中，VG战队首先拿出了自己擅长的小黑体系进行推进。这一套体系在第一天循环赛对战VG.R战队就发挥了非常好的效果，虽然VG战队的Sylar的斯文使用的非常好，通过溅射攻击多次单人反杀对面多个，但最后还是不敌VG.R战队扎实的阵容和充足的控制。VG.R战队在接下来的两场比赛中的BP阶段果断BAN掉了VG战队擅长的推进体系，最终推平了VG战队的三路高地，进入了总决赛。</p>
+					<img src="img/news-page/page4_1.jpg">
+					<p>总决赛BO5，双方也是拼尽全力，共打满5场，在总决赛的第三场比赛中，VG.R战队选择了黑暗游侠，小精灵，圣堂刺客，帕克和复仇之魂的五远体系，Yang这名选手也体现了一个优秀的三号位选手的特质，不仅擅长抗压型3号位，也可以胜任节奏型三号位，灵动飘逸的帕克最终带领队友赢下这关键的一局，拿下赛点。在最后一场比赛中，凭借Yang的虚空假面多次出色而果断的跳大，凤凰变蛋，地精修补匠疯狂输出加上下分开带线牵制，导致大招流的Ehome最终分身乏术，被偷掉两座外塔，最终VG.R以3:2战胜Ehome，赢得了淘汰赛的总冠军。</p>
+					<img src="img/news-page/page4_2.jpg">
+					<img src="img/news-page/page4_3.jpg">
+					<p>中国区预选赛至此圆满落幕，VG.R和WINGS战队将进入2016国际邀请赛正赛，而Ehome将进入外卡赛（东南亚战队Execration，欧洲Escape  Gaming战队，美洲区coL战队，这三支战队是其他三大区的外卡赛战队，他们将与Ehome在西雅图进行外卡赛。）祝福三支中国战队，希望他们能在2016国际邀请赛的赛场上重夺荣耀，让所有玩家一起期待美国西雅图钥匙球馆的再次相聚！</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ti-list0 -->
+	<div class="modal fade" id="ti-list0" tabindex="-1" role="dialog" aria-labelledby="ti-list0Label">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="ti-list0Label">The International DOTA2 Championships 1 <small>第一届DOTA2国际邀请赛</small></h4>
+				</div>
+				<div class="modal-body">
+					<img src="img/ti/ti1_2.png">
+					<p>2011年8月1日，Valve宣布举办第一届DOTA2国际邀请赛，并邀请了16支队伍进行比赛，这也是DOTA2第一次在公众面前亮相，并在网上以英语、中文、德语和俄语公示。该比赛由Valve出资建立，包括160万美元的总奖金，而比赛硬件则由英伟达赞助。同年8月17日至21日在科隆游戏展上进行了第一届比赛。</p>
+					<img src="img/ti/ti1_1.jpg">
+					<p>比赛一开始进行小组赛，其中每四组的胜者将晋级胜者组，而其他队伍则落入败者组。之后将进行双败淘汰赛。第一届比赛的决赛在乌克兰Natus Vincere战队和中国Ehome战队间展开。最终NaVi以3-1击败Ehome夺得冠军，获得奖金100万美元；Ehome夺得亚军，获得奖金25万美元，其他8至队伍分包奖池剩余的35万美元。</p>
+					<img src="img/ti/ti1_0.jpg">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Place</th>
+								<th>Team</th>
+								<th>Prize money</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1st</td>
+								<td><img src="img/ti/flag/Flag_of_Ukraine.svg.png">Natus Vincere</td>
+								<td>$1,000,000</td>
+							</tr>
+							<tr>
+								<td>2st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">EHOME</td>
+								<td>$250,000</td>
+							</tr>
+							<tr>
+								<td>3st</td>
+								<td><img src="img/ti/flag/Flag_of_Singapore.svg.png">Scythe Gaming</td>
+								<td>$150,000</td>
+							</tr>
+							<tr>
+								<td>4st</td>
+								<td><img src="img/ti/flag/Flag_of_Denmark.svg.png">MeetYourMakers</td>
+								<td>$80,000</td>
+							</tr>
+							<tr>
+								<td>5st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">Invictus Gaming</td>
+								<td>$35,000</td>
+							</tr>
+							<tr>
+								<td>5st</td>
+								<td><img src="img/ti/flag/Flag_of_Russia.svg.png">Moscow Five</td>
+								<td>$35,000</td>
+							</tr>
+							<tr>
+								<td>7st</td>
+								<td><img src="img/ti/flag/Flag_of_Thailand.svg.png">MiTH.Trust</td>
+								<td>$25,000</td>
+							</tr>
+							<tr>
+								<td>7st</td>
+								<td><img src="img/ti/flag/Flag_of_Europe.svg.png">Online Kingdom.Nirvana int</td>
+								<td>$25,000</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ti-list1 -->
+	<div class="modal fade" id="ti-list1" tabindex="-1" role="dialog" aria-labelledby="ti-list1Label">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="ti-list1Label">The International DOTA2 Championships 2 <small>第二届DOTA2国际邀请赛</small></h4>
+				</div>
+				<div class="modal-body">
+					<img src="img/ti/ti2_2.jpg">
+					<p>Valve在2012年5月的PAX游戏展上宣布举办第二届DOTA2国际邀请赛。这次比赛在8月32日至9月2日于西雅图贝纳罗亚音乐厅举行，各支队伍将在主舞台上的隔音玻璃室内进行游戏。奖池金额仍为160万美元，其中100万美元为冠军奖金；这次比赛同样以多种语言播报。</p>
+					<img src="img/ti/ti2_1.jpg">
+					<p>在决赛中，上届冠军Natus Vincere被中国战队Invictus Gaming以3-1的战绩击败。2012年11月Valve公布了一部记录整场赛事的纪录片以及对各支队伍的采访。</p>
+					<img src="img/ti/ti2_0.jpg">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Place</th>
+								<th>Team</th>
+								<th>Prize money</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">Invictus Gaming</td>
+								<td>$1,000,000</td>
+							</tr>
+							<tr>
+								<td>2st</td>
+								<td><img src="img/ti/flag/Flag_of_Ukraine.svg.png">Natus Vincere</td>
+								<td>$250,000</td>
+							</tr>
+							<tr>
+								<td>3st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">LGD-Gaming</td>
+								<td>$150,000</td>
+							</tr>
+							<tr>
+								<td>4st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">DK</td>
+								<td>$80,000</td>
+							</tr>
+							<tr>
+								<td>5st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">EHOME</td>
+								<td>$35,000</td>
+							</tr>
+							<tr>
+								<td>5st</td>
+								<td><img src="img/ti/flag/Flag_of_Singapore.svg.png">Zenith</td>
+								<td>$35,000</td>
+							</tr>
+							<tr>
+								<td>7st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">Tongfu</td>
+								<td>$25,000</td>
+							</tr>
+							<tr>
+								<td>7st</td>
+								<td><img src="img/ti/flag/22px-Flag_of_Malaysia.svg.png">Orange Esports</td>
+								<td>$25,000</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ti-list2 -->
+	<div class="modal fade" id="ti-list2" tabindex="-1" role="dialog" aria-labelledby="ti-list0Label">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="ti-list0Label">The International DOTA2 Championships 3 <small>第三届DOTA2国际邀请赛</small></h4>
+				</div>
+				<div class="modal-body">
+					<img src="img/ti/ti3_2.jpg">
+					<p>2013年4月15日Valve宣布举办第三届DOTA2国际邀请赛。这次比赛于8月7日至11日同样在西雅图贝纳罗亚音乐厅举行。第一支被邀请的队伍是卫冕冠军Invictus Gaming。16支参赛的队伍中有13支为受邀参加，其余3支队伍经由预选赛和比赛前的选拔赛选出。</p>
+					<img src="img/ti/ti3_1.jpg">
+					<p>5月6日Valve宣布开始出售观赛指南，该指南包含比赛的细节、日程以及其他观众可参与的项目。每份观赛指南收入的四分之一将加入到基础160万美元的奖池中，从而增加胜者的奖金。通过销售观赛指南，DOTA2国际邀请赛再次成为有史以来奖金最高的电子竞技比赛，总奖金超过英雄联盟第二赛季世界锦标赛的200万美元，达到2,874,381美元。2013年DOTA2国际邀请赛主持人，KCPQ新闻主编凯西·艾奇逊，提供了专业玩家和分析师的幕后评论和采访。此次赛事在直播网站如Twitch上的观看人次超过了100万。</p>
+					<img src="img/ti/ti3_0.jpg">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Place</th>
+								<th>Team</th>
+								<th>Prize money</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1st</td>
+								<td><img src="img/ti/flag/Flag_of_Sweden.svg.png">Alliance</td>
+								<td>$1,437,190</td>
+							</tr>
+							<tr>
+								<td>2st</td>
+								<td><img src="img/ti/flag/Flag_of_Ukraine.svg.png">Natus Vincere</td>
+								<td>$632,364</td>
+							</tr>
+							<tr>
+								<td>3st</td>
+								<td><img src="img/ti/flag/22px-Flag_of_Malaysia.svg.png">Orange Esports</td>
+								<td>$287,438</td>
+							</tr>
+							<tr>
+								<td>4st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">Tongfu</td>
+								<td>$201,207</td>
+							</tr>
+							<tr>
+								<td>5st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">DK</td>
+								<td>$114,975</td>
+							</tr>
+							<tr>
+								<td>5st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">Invictus Gaming</td>
+								<td>$114,975</td>
+							</tr>
+							<tr>
+								<td>7st</td>
+								<td><img src="img/ti/flag/Flag_of_Europe.svg.png">Fnatic</td>
+								<td>$43,116</td>
+							</tr>
+							<tr>
+								<td>7st</td>
+								<td><img src="img/ti/flag/Flag_of_the_United_States.svg.png">Liquid</td>
+								<td>$43,116</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ti-list3 -->
+	<div class="modal fade" id="ti-list3" tabindex="-1" role="dialog" aria-labelledby="ti-list0Label">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="ti-list0Label">The International DOTA2 Championships 4 <small>第四届DOTA2国际邀请赛</small></h4>
+				</div>
+				<div class="modal-body">
+					<img src="img/ti/ti4_2.jpg">
+					<p>2014年3月31日，Valve宣布举行第四届DOTA2国际邀请赛，比赛将于7月18日至7月21日在钥匙球馆进行，这一场地比前两届贝纳罗亚音乐厅可容纳人数更大。与前三届不同的是，这次比赛共有三种入场券，分别为一般入场券、二层座位和VIP门票。本次比赛共有11支队伍受邀参赛，并有4支队伍由5月12日至5月25日进行的地区选拔赛选出，第16支队伍则由各地比赛的冠亚军进行外卡预选赛选出。4月4日门票开售后不到一小时便售空。</p>
+					<img src="img/ti/ti4_1.jpg">
+					<p>本次比赛的总奖金于比赛开始前三周的6月27日突破1000万美元，再次打破了电子竞技比赛总奖金的世界记录。</p>
+					<img src="img/ti/ti4_0.jpg">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Place</th>
+								<th>Team</th>
+								<th>Prize money</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">Newbee</td>
+								<td>$5,028,308</td>
+							</tr>
+							<tr>
+								<td>2st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">Vici Gaming</td>
+								<td>$1,475,699</td>
+							</tr>
+							<tr>
+								<td>3st</td>
+								<td><img src="img/ti/flag/Flag_of_the_United_States.svg.png">Evil Geniuses</td>
+								<td>$1,038,455</td>
+							</tr>
+							<tr>
+								<td>4st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">DK</td>
+								<td>$819,833</td>
+							</tr>
+							<tr>
+								<td>5st</td>
+								<td><img src="img/ti/flag/Flag_of_the_United_Nations.svg.png">Cloud 9</td>
+								<td>$655,866</td>
+							</tr>
+							<tr>
+								<td>5st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">LGD-Gaming</td>
+								<td>$655,866</td>
+							</tr>
+							<tr>
+								<td>7st</td>
+								<td><img src="img/ti/flag/Flag_of_Ukraine.svg.png">Natus Vincere</td>
+								<td>$519,227</td>
+							</tr>
+							<tr>
+								<td>7st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">Invictus Gaming</td>
+								<td>$519,227</td>
+							</tr>
+							<tr>
+								<td>9st</td>
+								<td><img src="img/ti/flag/Flag_of_the_United_States.svg.png">Team Liquid</td>
+								<td>$49,190</td>
+							</tr>
+							<tr>
+								<td>9st</td>
+								<td><img src="img/ti/flag/22px-Flag_of_Malaysia.svg.png">Titan eSports</td>
+								<td>$49,190</td>
+							</tr>
+							<tr>
+								<td>11st</td>
+								<td><img src="img/ti/flag/Flag_of_Germany.svg.png">Mousesports</td>
+								<td>$38,259</td>
+							</tr>
+							<tr>
+								<td>11st</td>
+								<td><img src="img/ti/flag/Flag_of_Sweden.svg.png">Alliance</td>
+								<td>$38,259</td>
+							</tr>
+							<tr>
+								<td>13st</td>
+								<td><img src="img/ti/flag/Flag_of_Russia.svg.png">Empire</td>
+								<td>$21,862</td>
+							</tr>
+							<tr>
+								<td>13st</td>
+								<td><img src="img/ti/flag/Flag_of_Europe.svg.png">Fnatic</td>
+								<td>$21,862</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ti-list4 -->
+	<div class="modal fade" id="ti-list4" tabindex="-1" role="dialog" aria-labelledby="ti-list0Label">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="ti-list0Label">The International DOTA2 Championships 5 <small>第五届DOTA2国际邀请赛</small></h4>
+				</div>
+				<div class="modal-body">
+					<img src="img/ti/ti5_2.jpg">
+					<p>2015年1月5日，Valve宣布在举行第五届DOTA2国际邀请赛。比赛将于8月3日至8日在美国西雅图举行，16支队伍将参加该赛事。比赛奖金总额超过了1800万美元，其中的1640万美元是由购买门票的观众所贡献的。</p>
+					<img src="img/ti/ti5_1.jpg">
+					<p>美国战队EG击败中国黑马战队CDEC夺得本次比赛冠军。中国战队CDEC和LGD分获亚军和季军。虽然中国战队没有取得冠军，但是没有被邀请的黑马战队CDEC从中国区预选赛一直杀到TI5总决赛，对于CDEC而言，能走到这一步，他们已经值得骄傲了，希望下次他们能够有更好的表现。</p>
+					<img src="img/ti/ti5_0.png">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Place</th>
+								<th>Team</th>
+								<th>Prize money</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1st</td>
+								<td><img src="img/ti/flag/Flag_of_the_United_States.svg.png">Evil Geniuses</td>
+								<td>$6,616,014</td>
+							</tr>
+							<tr>
+								<td>2st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">CDEC Gaming</td>
+								<td>$2,848,562</td>
+							</tr>
+							<tr>
+								<td>3st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">LGD Gaming</td>
+								<td>$2,205,338</td>
+							</tr>
+							<tr>
+								<td>4st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">Vici Gaming</td>
+								<td>$1,562,114</td>
+							</tr>
+							<tr>
+								<td>5st</td>
+								<td><img src="img/ti/flag/Flag_of_Russia.svg.png">Virtus Pro</td>
+								<td>$1,182,011</td>
+							</tr>
+							<tr>
+								<td>5st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">EHOME</td>
+								<td>$1,182,011</td>
+							</tr>
+							<tr>
+								<td>7st</td>
+								<td><img src="img/ti/flag/Flag_of_Europe.svg.png">Team Secret</td>
+								<td>$818,316</td>
+							</tr>
+							<tr>
+								<td>7st</td>
+								<td><img src="img/ti/flag/Flag_of_South_Korea.svg.png">MVP Phoenix</td>
+								<td>$818,316</td>
+							</tr>
+							<tr>
+								<td>9st</td>
+								<td><img src="img/ti/flag/Flag_of_the_United_States.svg.png">compLexity Gaming</td>
+								<td>$218,217</td>
+							</tr>
+							<tr>
+								<td>9st</td>
+								<td><img src="img/ti/flag/Flag_of_Europe.svg.png">Cloud 9</td>
+								<td>$218,217</td>
+							</tr>
+							<tr>
+								<td>9st</td>
+								<td><img src="img/ti/flag/Flag_of_Russia.svg.png">Team Empire</td>
+								<td>$218,217</td>
+							</tr>
+							<tr>
+								<td>9st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">Invictus Gaming</td>
+								<td>$218,217</td>
+							</tr>
+							<tr>
+								<td>13st</td>
+								<td><img src="img/ti/flag/Flag_of_the_People's_Republic_of_China.svg.png">Newbee</td>
+								<td>$54,554</td>
+							</tr>
+							<tr>
+								<td>13st</td>
+								<td><img src="img/ti/flag/22px-Flag_of_Malaysia.svg.png">Fnatic</td>
+								<td>$54,554</td>
+							</tr>
+							<tr>
+								<td>13st</td>
+								<td><img src="img/ti/flag/Flag_of_Ukraine.svg.png">Natus Vincere</td>
+								<td>$54,554</td>
+							</tr>
+							<tr>
+								<td>13st</td>
+								<td><img src="img/ti/flag/Flag_of_South_Korea.svg.png">MVP.HOT6ix</td>
+								<td>$54,554</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 	<script src="js/jquery-3.0.0.min.js"></script>
 	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		$('#home-ti-carousel').on('slid.bs.carousel', function () {
+			setTiTitle();
+		});
+	</script>
 </body>
 </html>
