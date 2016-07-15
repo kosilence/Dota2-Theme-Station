@@ -12,36 +12,38 @@
 	<link rel="stylesheet" type="text/css" href="css/personal-style.css">
 
 </head>
-<body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+<body data-spy="scroll" data-target="#navbar" data-offset="20">
+	<!-- 首页导航栏 -->
+	<nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="#home-title-carousel">
 					<img src="icon/icon3.png">Dota2 Theme Station
 				</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
-					<li><a href="#">赛事消息</a></li>
-					<li><a href="#">历届TI</a></li>
+					<li class="active"><a href="#home-title-carousel">首页<span class="sr-only">(current)</span></a></li>
+					<li><a href="#home-news-list">赛事消息</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">战队 <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TI6受邀战队 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-						<li><a href="#">中国区</a></li>
-						<li><a href="#">欧洲区</a></li>
-						<li><a href="#">美洲区</a></li>
-						<li><a href="#">东南亚区</a></li>
+						<li><a href="#home-team-china">中国区</a></li>
+						<li><a href="#home-team-europe">欧洲区</a></li>
+						<li><a href="#home-team-americas">美洲区</a></li>
+						<li><a href="#home-team-southeastAsia">东南亚区</a></li>
+						<li><a href="#home-team-wildCard">外卡赛队伍</a></li>
 						</ul>
 					</li>
+					<li><a href="#home-ti-carousel">历届TI</a></li>
 					<li><a href="#">关于</a></li>
 				</ul>
 				<form class="navbar-form navbar-right" role="search">
@@ -53,7 +55,6 @@
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</nav>
-
 	<!-- 首页标题轮播图 -->
 	<div id="home-title-carousel" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
@@ -92,7 +93,7 @@
 	</div>
 
 	<!-- 赛事消息列表 -->
-	<div class="container">
+	<div id="home-news-list" class="container">
 		<div class="p-jumbotron">
 			<a href="#" data-toggle="modal" data-target="#news-page4">
 				<article class="p-article">
@@ -139,6 +140,213 @@
 		<a href="#" class="p-divide" onclick="newsBtnClick(this);return false;"><span class="glyphicon glyphicon-plus"></span></a>
 	</div>
 
+	<!-- 战队列表 -->
+	<div id="home-team-list" class="container">
+		<div class="p-team-wrap">
+			<img src="img/team/tit01.png" class="p-team-wrap-title">
+			<div id="home-team-china" class="row p-team-area">
+				<div class="p-team-title">C H I N A</div>
+				<div class="p-team-box">
+					<img src="img/team/LGD-GAMING.png">
+					<p>LGD-Gaming</p>
+					<div class="p-team-members">
+						<p>Agressif</p>
+						<p>Maybe</p>
+						<p>xiao8</p>
+						<p>SeptemberXue</p>
+						<p>MMY!</p>
+					</div>
+				</div><div class="p-team-box">
+					<img src="img/team/NEWBEE.png">
+					<p>Newbee</p>
+					<div class="p-team-members">
+						<p>Hao</p>
+						<p>Mu</p>
+						<p>kpii</p>
+						<p>ChuaN</p>
+						<p>Kaka</p>
+					</div>
+				</div><div class="p-team-box">
+					<img src="img/team/WINGS-GAMING.png">
+					<p>Wings-Gaming</p>
+					<div class="p-team-members">
+						<p>Shadow</p>
+						<p>bLink</p>
+						<p>Faith_bian</p>
+						<p>Innocence</p>
+						<p>iceice</p>
+					</div>
+				</div><div class="p-team-box">
+					<img src="img/team/VICI-GAMING-REBORN.png">
+					<p>VG-Reborn</p>
+					<div class="p-team-members">
+						<p>Zyf</p>
+						<p>Nono</p>
+						<p>Yang</p>
+						<p>Fy</p>
+						<p>DDC</p>
+					</div>
+				</div>
+			</div>
+			<div id="home-team-europe" class="row p-team-area">
+				<div class="p-team-title">E U R O P E</div>
+				<div class="p-team-box">
+					<img src="img/team/og.png">
+					<p>OG</p>
+					<div class="p-team-members">
+						<p>N0tail</p>
+						<p>Miracle-</p>
+						<p>MoonMeander</p>
+						<p>Cr1t-</p>
+						<p>Fly</p>
+					</div>
+				</div><div class="p-team-box">
+					<img src="img/team/NATUS-VINCERE.png">
+					<p>Natus-Vincere</p>
+					<div class="p-team-members">
+						<p>DityaRa</p>
+						<p>Dendi</p>
+						<p>GeneraL</p>
+						<p>Artstyle</p>
+						<p>SoNNeikO</p>
+					</div>
+				</div><div class="p-team-box">
+					<img src="img/team/TEAM-LIQUID.png">
+					<p>Team-Liquid</p>
+					<div class="p-team-members">
+						<p>MATUMBAMAN</p>
+						<p>FATA-</p>
+						<p>MinD_ContRoL</p>
+						<p>KuroKy</p>
+						<p>JerAx</p>
+					</div>
+				</div><div class="p-team-box">
+					<img src="img/team/TEAM-SECRET.png">
+					<p>Team-Secret</p>
+					<div class="p-team-members">
+						<p>EternaLEnVy</p>
+						<p>Arteezy</p>
+						<p>BuLba</p>
+						<p>Puppey</p>
+						<p>pieliedie</p>
+					</div>
+				</div><div class="p-team-box">
+					<img src="img/team/ALLIANCE.png">
+					<p>Alliance</p>
+					<div class="p-team-members">
+						<p>Loda</p>
+						<p>s4</p>
+						<p>AdmiralBulldog</p>
+						<p>Akke</p>
+						<p>EGM</p>
+					</div>
+				</div>
+			</div>
+			<div id="home-team-americas" class="row p-team-area">
+				<div class="p-team-title">A M E R I C A S</div>
+				<div class="p-team-box">
+					<img src="img/team/EVIL-GENIUSES.png">
+					<p>Evil-Geniuses</p>
+					<div class="p-team-members">
+						<p>Fear</p>
+						<p>SumaiL</p>
+						<p>UNiVeRsE</p>
+						<p>zai</p>
+						<p>ppd</p>
+					</div>
+				</div><div class="p-team-box">
+					<img src="img/team/DIGITAL-CHAOS.png">
+					<p>Digital-Chaos</p>
+					<div class="p-team-members">
+						<p>Resolut1on</p>
+						<p>w33</p>
+						<p>Moo</p>
+						<p>Saksa</p>
+						<p>MiSeRy</p>
+					</div>
+				</div>
+			</div>
+			<div id="home-team-southeastAsia" class="row p-team-area">
+				<div class="p-team-title">S O U T H E A S T &nbspA S I A</div>
+				<div class="p-team-box">
+					<img src="img/team/MVP-Phoenix.png">
+					<p>MVP-Phoenix</p>
+					<div class="p-team-members">
+						<p>MP</p>
+						<p>QO</p>
+						<p>Forev</p>
+						<p>Febby</p>
+						<p>DuBu</p>
+					</div>
+				</div><div class="p-team-box">
+					<img src="img/team/FNATIC.png">
+					<p>Fnatic</p>
+					<div class="p-team-members">
+						<p>Mushi</p>
+						<p>MidOne</p>
+						<p>Ohaiyo</p>
+						<p>DJ</p>
+						<p>343</p>
+					</div>
+				</div><div class="p-team-box">
+					<img src="img/team/TNC-PRO-GAMING.png">
+					<p>TNC-Gaming</p>
+					<div class="p-team-members">
+						<p>Raven</p>
+						<p>Kuku</p>
+						<p>Sam_H</p>
+						<p>eyyou</p>
+						<p>DeMoN</p>
+					</div>
+				</div>
+			</div>
+			<div id="home-team-wildCard" class="row p-team-area">
+				<div class="p-team-title">外卡赛队伍</div>
+				<div class="p-team-box">
+					<img src="img/team/team_ehome.png">
+					<p>EHOME</p>
+					<div class="p-team-members">
+						<p>iceiceice</p>
+						<p>old chicken</p>
+						<p>eLeVeN</p>
+						<p>LaNm</p>
+						<p>Fenrir</p>
+					</div>
+				</div><div class="p-team-box">
+					<img src="img/team/Escape_Gaming.png">
+					<p>Escape-Gaming</p>
+					<div class="p-team-members">
+						<p>Era</p>
+						<p>qojqva</p>
+						<p>KheZu</p>
+						<p>YapzOr</p>
+						<p>syndereN</p>
+					</div>
+				</div><div class="p-team-box">
+					<img src="img/team/COL.png">
+					<p>COL-Gaming</p>
+					<div class="p-team-members">
+						<p>Chessie</p>
+						<p>Limmp</p>
+						<p>swindlemelonzz</p>
+						<p>Zfreek</p>
+						<p>Handsken</p>
+					</div>
+				</div><div class="p-team-box">
+					<img src="img/team/Xctnlogo.png">
+					<p>Execration</p>
+					<div class="p-team-members">
+						<p>Nando</p>
+						<p>Abed</p>
+						<p>RR</p>
+						<p>Tims</p>
+						<p>Kim0</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- 首页历届TI轮播图 -->
 	<div id="home-ti-carousel" class="carousel slide" data-ride="carousel">
 		<div class="p-carousel-leftpic">
@@ -182,38 +390,33 @@
 		</a>
 	</div>
 
-	<!-- 战队列表 -->
-	<div id="teamList">
-		<img src="img/bg/bg_01.jpg">
-	</div>
-
 	<!-- 弹出框page页面内容 -->
 	<!-- news-page0 -->
 	<div class="modal fade" id="news-page0" tabindex="-1" role="dialog" aria-labelledby="news-page0Label">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h4 class="modal-title" id="news-page0Label">2016年中国区预选赛赛制及小组赛赛程公布</h4>
-					</div>
-					<div class="modal-body">
-						<p>距离2016年国际邀请赛中国区预选赛正式开赛仅剩两天了。10支战队已全部揭晓。</p>
-						<p>他们分别是：CDEC，IG.Vitality，CDEC.Youth，Wings Gaming，IG，TongFu，EHOME和Vici Gaming.Reborn（八支直接受邀战队）和Vici Gaming，NEWBEE.Y（两支公开赛优胜队伍）。</p>
-						<p>2016年国际邀请赛中国区预选赛会分为小组赛和淘汰赛进行选拔
-							小组赛：8支直接受邀的战队将与两支公开赛优胜队伍进行BO1积分循环赛，最终积分排名第一直接获得2016国际邀请赛小组赛名额。第2-5名战队将进行两天的淘汰赛。其他队伍均被淘汰。</p>
-						<p>淘汰赛：四支队伍将进行双败淘汰，第二名的战队可随机挑选第四或第五的战队进行比赛，第三名将与剩下的一支进行较量，淘汰赛冠军将获得前往西雅图的第二张门票，淘汰赛亚军将与其他三大区的战队进行外卡赛。</p>
-						<img src="img/news-page/page0_2.jpg">
-						<p>26日-27日的小组积分赛赛程已公布，可点击赛程页面查看详细比赛时间及对阵。</p>
-						<h5>6月26日赛程</h5>
-						<img src="img/news-page/page0_0.jpg">
-						<h5>6月27日赛程</h5>
-						<img src="img/news-page/page0_1.jpg">
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="news-page0Label">2016年中国区预选赛赛制及小组赛赛程公布</h4>
+				</div>
+				<div class="modal-body">
+					<p>距离2016年国际邀请赛中国区预选赛正式开赛仅剩两天了。10支战队已全部揭晓。</p>
+					<p>他们分别是：CDEC，IG.Vitality，CDEC.Youth，Wings Gaming，IG，TongFu，EHOME和Vici Gaming.Reborn（八支直接受邀战队）和Vici Gaming，NEWBEE.Y（两支公开赛优胜队伍）。</p>
+					<p>2016年国际邀请赛中国区预选赛会分为小组赛和淘汰赛进行选拔
+						小组赛：8支直接受邀的战队将与两支公开赛优胜队伍进行BO1积分循环赛，最终积分排名第一直接获得2016国际邀请赛小组赛名额。第2-5名战队将进行两天的淘汰赛。其他队伍均被淘汰。</p>
+					<p>淘汰赛：四支队伍将进行双败淘汰，第二名的战队可随机挑选第四或第五的战队进行比赛，第三名将与剩下的一支进行较量，淘汰赛冠军将获得前往西雅图的第二张门票，淘汰赛亚军将与其他三大区的战队进行外卡赛。</p>
+					<img src="img/news-page/page0_2.jpg">
+					<p>26日-27日的小组积分赛赛程已公布，可点击赛程页面查看详细比赛时间及对阵。</p>
+					<h5>6月26日赛程</h5>
+					<img src="img/news-page/page0_0.jpg">
+					<h5>6月27日赛程</h5>
+					<img src="img/news-page/page0_1.jpg">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
+	</div>
 	<!-- news-page1 -->
 	<div class="modal fade" id="news-page1" tabindex="-1" role="dialog" aria-labelledby="news-page1Label">
 		<div class="modal-dialog" role="document">

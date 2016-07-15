@@ -49,8 +49,32 @@ var init = function() {
         }
         pHeight = newsTagsHeight[0] + newsTagsHeight[1];
         newsTags[0].parentNode.style.height = pHeight + "px";
+
+        var teamBox = func.$a(".p-team-box");
+        var teamBoxNum = teamBox.length;
+        for(var j=0;j<teamBoxNum;j++) {
+                func.addEvent(teamBox[j], "click", function() {
+                        this.lastElementChild.style.transform = "scale3d(1, 1, 1)";
+                });
+                func.addEvent(teamBox[j].lastElementChild, "click", function() {
+                        this.style.transform = "scale3d(0, 0, 0)";
+                        event.cancelBubble = true;//禁止起泡事件，防止div点击事件往上一级传递
+                });
+                // func.addEvent(teamBox[j].lastElementChild, "blur", function() {
+                //         this.style.display = "none";
+                //         event.cancelBubble = true;//禁止起泡事件，防止div点击事件往上一级传递
+                // });
+        }
 };
 function newsBtnClick(ele) {
+        newsTagsHeight = [];
+        for(var i=0;i<newsNum;i++) {
+                newsTagsHeight[i] = newsTags[i].offsetHeight;
+        }
+        if(newDisCount == 2){
+                pHeight = newsTagsHeight[0] + newsTagsHeight[1];
+                newsTags[0].parentNode.style.height = pHeight + "px";
+        }
         if(newsNum - newDisCount >= 2){
                 pHeight = pHeight + newsTagsHeight[newDisCount] + newsTagsHeight[newDisCount + 1];
                 newsTags[0].parentNode.style.height = pHeight + "px";
