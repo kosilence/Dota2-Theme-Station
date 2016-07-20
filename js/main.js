@@ -60,10 +60,6 @@ var init = function() {
                         this.style.transform = "scale3d(0, 0, 0)";
                         event.cancelBubble = true;//禁止起泡事件，防止div点击事件往上一级传递
                 });
-                // func.addEvent(teamBox[j].lastElementChild, "blur", function() {
-                //         this.style.display = "none";
-                //         event.cancelBubble = true;//禁止起泡事件，防止div点击事件往上一级传递
-                // });
         }
 };
 function newsBtnClick(ele) {

@@ -8,11 +8,11 @@
 	<link rel="icon" href="icon/icon3.png">
 	<title>Dota2 Theme Station</title>
 	<!-- 新 Bootstrap 核心 CSS 文件 -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/personal-style.css">
 
 </head>
-<body data-spy="scroll" data-target="#navbar" data-offset="20">
+<body data-spy="scroll" data-target="#navbar" data-offset="50">
 	<!-- 首页导航栏 -->
 	<nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
@@ -24,39 +24,34 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#home-title-carousel">
+				<a class="navbar-brand" href="#home-title-carousel-anchor">
 					<img src="icon/icon3.png">Dota2 Theme Station
 				</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#home-title-carousel">首页<span class="sr-only">(current)</span></a></li>
-					<li><a href="#home-news-list">赛事消息</a></li>
+					<li class="active"><a href="#home-title-carousel-anchor">首页<span class="sr-only">(current)</span></a></li>
+					<li><a href="#home-news-list-anchor">赛事消息</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TI6受邀战队 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-						<li><a href="#home-team-china">中国区</a></li>
-						<li><a href="#home-team-europe">欧洲区</a></li>
-						<li><a href="#home-team-americas">美洲区</a></li>
-						<li><a href="#home-team-southeastAsia">东南亚区</a></li>
-						<li><a href="#home-team-wildCard">外卡赛队伍</a></li>
+						<li><a href="#home-team-china-anchor">中国区</a></li>
+						<li><a href="#home-team-europe-anchor">欧洲区</a></li>
+						<li><a href="#home-team-americas-anchor">美洲区</a></li>
+						<li><a href="#home-team-southeastAsia-anchor">东南亚区</a></li>
+						<li><a href="#home-team-wildCard-anchor">外卡赛队伍</a></li>
 						</ul>
 					</li>
-					<li><a href="#home-ti-carousel">历届TI</a></li>
-					<li><a href="#">关于</a></li>
+					<li><a href="#home-ti-carousel-anchor">历届TI</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#home-about">关于</a></li>
 				</ul>
-				<form class="navbar-form navbar-right" role="search">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Search">
-					</div>
-					<button type="submit" class="btn btn-default">搜索</button>
-				</form>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</nav>
 	<!-- 首页标题轮播图 -->
 	<div id="home-title-carousel" class="carousel slide" data-ride="carousel">
+		<a id="home-title-carousel-anchor" class="add-offset"></a>
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
 			<li data-target="#home-title-carousel" data-slide-to="0" class="active"></li>
@@ -94,6 +89,7 @@
 
 	<!-- 赛事消息列表 -->
 	<div id="home-news-list" class="container">
+		<a id="home-news-list-anchor" class="add-offset"></a>
 		<div class="p-jumbotron">
 			<a href="#" data-toggle="modal" data-target="#news-page4">
 				<article class="p-article">
@@ -142,9 +138,11 @@
 
 	<!-- 战队列表 -->
 	<div id="home-team-list" class="container">
+		<a id="home-team-list-anchor" class="add-offset"></a>
 		<div class="p-team-wrap">
 			<img src="img/team/tit01.png" class="p-team-wrap-title">
 			<div id="home-team-china" class="row p-team-area">
+				<a id="home-team-china-anchor" class="add-offset"></a>
 				<div class="p-team-title">C H I N A</div>
 				<div class="p-team-box">
 					<img src="img/team/LGD-GAMING.png">
@@ -189,6 +187,7 @@
 				</div>
 			</div>
 			<div id="home-team-europe" class="row p-team-area">
+				<a id="home-team-europe-anchor" class="add-offset"></a>
 				<div class="p-team-title">E U R O P E</div>
 				<div class="p-team-box">
 					<img src="img/team/og.png">
@@ -243,6 +242,7 @@
 				</div>
 			</div>
 			<div id="home-team-americas" class="row p-team-area">
+				<a id="home-team-americas-anchor" class="add-offset"></a>
 				<div class="p-team-title">A M E R I C A S</div>
 				<div class="p-team-box">
 					<img src="img/team/EVIL-GENIUSES.png">
@@ -267,6 +267,7 @@
 				</div>
 			</div>
 			<div id="home-team-southeastAsia" class="row p-team-area">
+				<a id="home-team-southeastAsia-anchor" class="add-offset"></a>
 				<div class="p-team-title">S O U T H E A S T &nbspA S I A</div>
 				<div class="p-team-box">
 					<img src="img/team/MVP-Phoenix.png">
@@ -301,6 +302,7 @@
 				</div>
 			</div>
 			<div id="home-team-wildCard" class="row p-team-area">
+				<a id="home-team-wildCard-anchor" class="add-offset"></a>
 				<div class="p-team-title">外卡赛队伍</div>
 				<div class="p-team-box">
 					<img src="img/team/team_ehome.png">
@@ -349,6 +351,7 @@
 
 	<!-- 首页历届TI轮播图 -->
 	<div id="home-ti-carousel" class="carousel slide" data-ride="carousel">
+		<a id="home-ti-carousel-anchor" class="add-offset"></a>
 		<div class="p-carousel-leftpic">
 			<img src="img/ti/ti-leftpic.png">
 		</div>
@@ -390,6 +393,11 @@
 		</a>
 	</div>
 
+	<!-- 首页footer -->
+	<div class="container-fluid p-screen-line"></div>
+	<div id="home-footer" class="container p-home-footer">
+		<p>@2016 Dota2 Theme Station | Powered By <a href="https://github.com/kosilence" target="_blank">kosilence</a></p>
+	</div>
 	<!-- 弹出框page页面内容 -->
 	<!-- news-page0 -->
 	<div class="modal fade" id="news-page0" tabindex="-1" role="dialog" aria-labelledby="news-page0Label">
@@ -933,6 +941,22 @@
 							</tr>
 						</tbody>
 					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- home-about -->
+	<div class="modal fade" id="home-about" tabindex="-1" role="dialog" aria-labelledby="home-aboutLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="home-aboutLabel">这个网站是做着玩的 <small>嘻嘻嘻嘻嘻</small></h4>
+				</div>
+				<div class="modal-body">
+
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
